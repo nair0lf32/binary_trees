@@ -18,13 +18,13 @@ return (1);
 return (x * _pow(x, y - 1));
 }
 /**
-*binary_tree_is_perfect - Checks if a binary tree is perfect.
-*@tree: A pointer to the root node of the tree to check.
+*binary_tree_is_perfect - Checks if a binary tree is perfect
+*@tree: A pointer to the root node of the tree to check
 *Return: 1 if perfect or 0
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-int size = 0, height = 0, is_perfect; 
+int size = 0, height = 0, is_perfect;
 if (tree == NULL)
 {
 return (0);
