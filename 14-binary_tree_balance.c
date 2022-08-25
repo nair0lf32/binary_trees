@@ -11,6 +11,7 @@ if (tree == NULL)
 {
 return (0);
 }
-factor = binary_tree_height(tree->left) - binary_tree_height(tree->right);
+factor = binary_tree_height(tree->left);
+factor -= binary_tree_height(tree->right);
 return (factor);
 }
