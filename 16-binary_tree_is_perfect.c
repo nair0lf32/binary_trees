@@ -1,5 +1,23 @@
 #include "binary_trees.h"
 /**
+*_pow - re-implements math.h pow function
+*@x: A number to raise
+*@y: A power to raise x to
+*Return: x raised to y
+*/
+int _pow(int x, int y)
+{
+if (x == 0)
+{
+return (0);
+}
+if (y == 0)
+{
+return (1);
+}
+return (x * _pow(x, y - 1));
+}
+/**
 *binary_tree_is_perfect - Checks if a binary tree is perfect.
 *@tree: A pointer to the root node of the tree to check.
 *Return: 1 if perfect or 0
@@ -13,7 +31,7 @@ return (0);
 }
 size = (int)binary_tree_size(tree);
 height = (int)binary_tree_height(tree);
-is_perfect = (pow(2, height + 1) - 1 == size);
+is_perfect = (_pow(2, height + 1) - 1 == size);
 return (is_perfect);
 }
 /**
